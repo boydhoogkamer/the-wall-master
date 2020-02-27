@@ -1,6 +1,7 @@
 <?php
-require 'config.php';
+function dbConnect() {
 try {
+    require 'config.php';
     $dsn = "mysql:host=" . $config['db_host'] . ';dbname=' . $config['db_name'];
     $pdo = new PDO($dsn, $config['db_user'], $config['db_pass']);
  
@@ -13,4 +14,5 @@ try {
         echo "Database connectie fout: " . $fout->getMessage();
         exit;
     }
+}
 ?>

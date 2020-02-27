@@ -1,9 +1,9 @@
 <?php
 $config = [
-    'db_host' => '127.0.0.1',
-    'db_name' => 'c3621thewall',
-    'db_user' => 'c3621root',
-    'db_pass' => 'ipnNueTJG@4L',
+    'db_host' => 'localhost',
+    'db_name' => 'TheWall',
+    'db_user' => 'root',
+    'db_pass' => '',
     'view_path' => realpath(__DIR__  . '/../views')
 ];
 
