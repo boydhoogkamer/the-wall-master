@@ -8,4 +8,5 @@
 <h2><?php echo $post['likes'] ?></h2>
 <?php endforeach;?>
 
+
 <?php require __DIR__ . "/../templates/footer.php"; ?>

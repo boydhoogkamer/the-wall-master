@@ -18,8 +18,9 @@ switch ( $_GET['page'] ) {
 	case 'feed':
 		feed();
 		break;
-	// case 'patchnotes':
-	// 	patchnotes();
+	case 'upload':
+		upload();
+		break;
     //     break;
     // case 'gametips':
 	// 	gametips();

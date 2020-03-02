@@ -14,6 +14,15 @@ function feed() {
     include $view;
 }
 
+function upload() {
+
+    global $CONFIG;
+
+    $view = $CONFIG['view_path'] . '/upload.php';
+
+    include $view;
+}
+
 // function about() {
 //     include "about.php";
 // }
