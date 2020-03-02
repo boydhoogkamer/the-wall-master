@@ -3,15 +3,13 @@
   $msg = "";
 
   if (isset($_POST['upload'])) {
-    $target = "../images".basename($_FILES['image']['name']);
+    $filename = basename($_FILES['image']['name']);
+    $target = __DIR__ ."/../../images/".$filename;
     $image = $_FILES['image']['name'];
     $caption = $_POST['caption'];
     $tags  = $_POST[ 'tag'];
-    $sql = "INSERT INTO post (image, caption, tag) VALUES ('$image', '$caption', '$tags')";
-    $db = mysqli_connect("localhost", "root", "", "TheWall");
-    mysqli_query($db, $sql);
-
           if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+            save_photo($filename, $caption, $tags);
             header("Location: index.php?page=upload");
           } else {
               echo "something went wrong";
