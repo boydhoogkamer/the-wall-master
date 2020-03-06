@@ -8,10 +8,11 @@
     <meta name="keywords" content="Library Images">
     <meta name="description" content="Image library for inspiration and other purposes.">
     <link rel="apple-touch-icon" href="">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/feed.css">
+    <link rel="stylesheet" href="styles/login.css">
     <meta name='msapplication-TileImage' content="">
     <meta name='msapplication-TileColor' content="#292A2E">
-	  <meta name="msapplication-square310x310logo" content="">
+	<meta name="msapplication-square310x310logo" content="">
     <link rel="shortcut icon" type="image/x-icon" href="" />
     <title>The Wall</title>
 </head>

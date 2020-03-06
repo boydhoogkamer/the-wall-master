@@ -23,6 +23,15 @@ function upload() {
     include $view;
 }
 
+function login() {
+
+    global $CONFIG;
+
+    $view = $CONFIG['view_path'] . '/login.php';
+
+    include $view;
+}
+
 // function about() {
 //     include "about.php";
 // }

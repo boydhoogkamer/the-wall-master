@@ -1,4 +1,6 @@
 <?php
+  require __DIR__ . "/../templates/header.php";
+
   // Initialize message variable
   $msg = "";
 
@@ -34,3 +36,5 @@
           <input type="submit" name="upload" value="Upload Image">
         </div>
       </form>
+
+    <?php require __DIR__ . "/../templates/footer.php"; ?>

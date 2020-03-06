@@ -21,9 +21,9 @@ switch ( $_GET['page'] ) {
 	case 'upload':
 		upload();
 		break;
-    //     break;
-    // case 'gametips':
-	// 	gametips();
+        break;
+    case 'login':
+		login();
     //     break;
     // case 'about':
 	// 	about();
