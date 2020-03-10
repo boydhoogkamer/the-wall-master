@@ -3,20 +3,6 @@
 
   // Initialize message variable
   $msg = "";
-
-  if (isset($_POST['upload'])) {
-    $filename = basename($_FILES['image']['name']);
-    $target = __DIR__ ."/../../images/".$filename;
-    $image = $_FILES['image']['name'];
-    $caption = $_POST['caption'];
-    $tags  = $_POST[ 'tag'];
-          if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-            save_photo($filename, $caption, $tags);
-            header("Location: index.php?page=upload");
-          } else {
-              echo "something went wrong";
-          }
-  }
 ?>
 
 <form method="post" action="index.php?page=upload" enctype="multipart/form-data">

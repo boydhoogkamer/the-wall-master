@@ -1,13 +1,14 @@
  <?php require __DIR__ . "/../templates/header.php"; ?>
-
-
  <?php foreach ($posts as $post):?>
 <div id="images-div" class="images-div">
 <img id="feed-image" class="feed-image" src="images/<?php echo $post['image'] ?>">
 </div>
 
 <div id="topicons" class="topicons">
-<img class="icon-vifo" src="images/IF.svg" alt="ViFo Icon">
+<div class="vifo-icon-text">
+<img id="icon-vifo" class="icon-vifo" src="images/IF.svg" alt="ViFo Icon">
+<div id="vifo-textcloud" class="vifo-textcloud">Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum</div>
+</div>
 <div id="icon-burger" class="icon-burger">
 <div class="line1 line"></div>
 <div class="line2 line"></div>
@@ -50,5 +51,5 @@
 </div>
 <?php endforeach;?>
 <script src="js/feed.js"></script>
-
 <?php require __DIR__ . "/../templates/footer.php"; ?>
+

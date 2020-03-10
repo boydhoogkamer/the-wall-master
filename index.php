@@ -21,15 +21,12 @@ switch ( $_GET['page'] ) {
 	case 'upload':
 		upload();
 		break;
-        break;
     case 'login':
 		login();
-    //     break;
-    // case 'about':
-	// 	about();
-    //     break;
-    // case 'contact':
-	// 	contact();
-    //     break;
+		break;
+    case 'checkpassword':
+		checkpassword();
+	case 'createaccount':
+		createaccount();
         
 }

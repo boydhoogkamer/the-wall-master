@@ -8,3 +8,8 @@
 <h2>Likes: <?php echo $post['likes'] ?></h2>
 <?php endforeach;?>
 </div>
+
+
+ <?php foreach ($posts as $post):?>
+
+ <?php endforeach;?>
