@@ -1,9 +1,10 @@
  <?php require __DIR__ . "/../templates/header.php"; ?>
+ <?php include __DIR__ . "/../includes/rotate.php"; ?>
  <?php foreach ($posts as $post):?>
+
 <div id="images-div" class="images-div">
 <img id="feed-image" class="feed-image" src="images/<?php echo $post['image'] ?>">
 </div>
-
 <div id="topicons" class="topicons">
 <div class="vifo-icon-text">
 <img id="icon-vifo" class="icon-vifo" src="images/IF.svg" alt="ViFo Icon">
