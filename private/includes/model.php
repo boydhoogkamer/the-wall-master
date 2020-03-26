@@ -21,6 +21,15 @@ function get_post($id) {
     return $statement;
 }
 
+function isLoggedIn() {
+    global $_SESSION;
+
+    if (isset($_SESSION['id'])) {
+        return true;
+    } 
+    return false;
+}
+
 function save_photo($image, $caption, $tags) {
     $db = dbConnect();
     $data = [$image, $caption, $tags];
