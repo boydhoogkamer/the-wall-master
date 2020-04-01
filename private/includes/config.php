@@ -6,6 +6,5 @@ $config = [
     'db_pass' => '',
     'view_path' => realpath(__DIR__  . '/../views')
 ];
-
 return $config;
 ?>

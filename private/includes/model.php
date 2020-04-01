@@ -4,8 +4,20 @@ include 'dbConnect.php';
 
 function get_posts() {
     $pdo = dbConnect();
-    $query = 'SELECT * FROM `post`';
+    $query = 'SELECT post.*, users.user_name, users.user_email FROM post INNER JOIN users ON users.user_id = post.user_id ';
     $statement = $pdo->query( $query );
+
+    return $statement;
+}
+
+function get_userposts($user_id) {
+    $pdo = dbConnect();
+    $query = 'SELECT post.*, users.user_name, users.user_email FROM post INNER JOIN users ON users.user_id = post.user_id WHERE post.user_id = :user_id ';
+    $statement = $pdo->prepare( $query );
+    $params = [
+        'user_id' => $user_id
+    ];
+    $statement->execute($params);
 
     return $statement;
 }
@@ -21,12 +33,17 @@ function get_post($id) {
     return $statement;
 }
 
-function isLoggedIn() {
+function logInCheck(){
     global $_SESSION;
-
-    if (isset($_SESSION['id'])) {
+    session_start();
+    if(!isLoggedIn()){
+        header('Location: index.php?page=login');
+    }
+}
+function isLoggedIn(){
+    if(isset($_SESSION['user_id'])){
         return true;
-    } 
+    }
     return false;
 }
 

@@ -8,14 +8,10 @@ function feed() {
 
     global $CONFIG;
 
-    // if (!isLoggedIn()) {
-    //     header('location: index.php?page=feed');
-    // } else {
-    //     header('location: index.php?page=login');
-    // }
+    logInCheck();
 
     $view = $CONFIG['view_path'] . '/feed.php';
-    $posts = get_posts();
+    $posts = get_userposts($_SESSION['user_id']);
     
     include $view;
 }
@@ -47,40 +43,49 @@ function login() {
 
     global $CONFIG;
 
+    session_start();
+    session_destroy();
+
     $view = $CONFIG['view_path'] . '/login.php';
 
     include $view;
 }
 
 function checkpassword() {
-    if (isset($_POST['username'] , $_POST['password'])) {
-        $username = $_POST['username'];
-        $password = md5($_POST['password']);
-        
-    if (empty($username) or empty($password)) {
-            $error = 'Elk veld moet ingevuld worden!';
-            header('Location: index.php?page=login'); 
-        } else {
-            $pdo = dbConnect();
-            $query = $pdo->prepare("SELECT * FROM users WHERE user_name = ? AND user_password = ?");
-            $query->bindValue(1, $username);
-            $query->bindValue(2, $password);
-            $query->execute();
-            $num = $query->rowCount();
+    session_start();
+    $errors = [];
 
-            if ($num == 1) {
-                session_start();
-                $_SESSION['user_id'] =
-                $_SESSION['logged_in'] = true;
-                header('Location: index.php?page=feed');
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-            } else {
-                session_destroy();
-            $_SESSION['logged_in'] = false;
-            $error = 'Incorrect gebruikersnaam of wachtwoord!';
-            header('Location: index.php?page=login');
-            }   
+        $user_name = $_POST['user_name'];
+        $password = $_POST['password'];
+
+        $sql = 'SELECT * FROM users WHERE user_name = :user_name';
+
+        $statement = dbConnect()->prepare($sql);
+
+        $params = [
+            'user_name' => $user_name
+        ];
+
+        $result = $statement->execute($params);
+
+    } else {
+        $error = 'Inloggen mislukt';
+        exit;
+    }
+
+    if($statement->rowCount() === 1){
+        $user = $statement->fetch();
+
+        if(password_verify($password, $user['user_password'])){
+            $_SESSION['user_id'] = $user['user_id'];
+            $_SESSION['user_name'] = $user['user_name'];
+            header('Location: index.php?page=feed');
         }
+
+    } else {    
+        $errors['wachtwoord'] = 'Verkeerde wachtwoord ingevoerd!';
     }
 }
 
@@ -89,7 +94,7 @@ function createaccount() {
     if (isset($_POST['registreersubmit'])) {
         $user_name = $_POST['registreernaam'];
         $user_email = $_POST['registreeremail'];
-        $user_password  = md5($_POST['registreerpassword']);
+        $user_password  = password_hash($_POST['registreerpassword'], PASSWORD_DEFAULT);
         register($user_name, $user_email, $user_password);
       }
 

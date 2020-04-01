@@ -8,8 +8,11 @@
     <meta name="keywords" content="Library Images">
     <meta name="description" content="Image library for inspiration and other purposes.">
     <link rel="apple-touch-icon" href="">
-    <link rel="stylesheet" href="styles/feed.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" type="text/css" href="styles/feed.css">
+    <link rel="stylesheet" type="text/css" href="styles/upload.css">
+    <link rel="stylesheet" type="text/css" href="styles/login.css">
+    <link rel="stylesheet" type="text/css" href="styles/upload.css">
+    <link rel="stylesheet" type="text/css" href="styles/topbar.css">
     <meta name='msapplication-TileImage' content="">
     <meta name='msapplication-TileColor' content="#292A2E">
 	<meta name="msapplication-square310x310logo" content="">

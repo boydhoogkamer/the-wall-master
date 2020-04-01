@@ -1,26 +1,17 @@
 <?php
   require __DIR__ . "/../templates/header.php";
-
-  // Initialize message variable
-  $msg = "";
+  require __DIR__ . "/../templates/topbar.php";
 ?>
 
-<form method="post" action="index.php?page=upload" enctype="multipart/form-data">
-        <input type="hidden" name="size" value="1000000">
-        <div class="fileButton">
-          <input type="file" name="image" required>
-        </div>
-        <p class="post-caption"><label>Add caption:</label></p>
-        <div class="addTitle">
-          <input type="text" name="caption" placeholder="Caption" required>
-        </div>
-        <p class="tagTxt"><label>Add tags:</label></p>
-        <div class="addTag">
-          <input type="text" name="tag" placeholder="Type here your tags..." required>
-        </div>
-        <div class="uploadButton">
-          <input type="submit" name="upload" value="Upload Image">
-        </div>
-      </form>
+<div class="upload__select">  
+<input  id="uploadImage"  style="display:none;"  type="file" name="myPhoto" onchange="PreviewImage();" />
+<label for="uploadImage">Select file</label>
+</div>
 
-    <?php require __DIR__ . "/../templates/footer.php"; ?>
+<div class="upload__img">  
+<img class="uploaded__img" id="uploadPreview" />
+</div>
+
+<script src="js/upload.js"></script>
+<script src="js/feed.js"></script>
+<?php require __DIR__ . "/../templates/footer.php"; ?>

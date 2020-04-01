@@ -25,7 +25,7 @@
         <form class="login-form" id="login-form" action="index.php?page=checkpassword" method="post">
 
             <p class="login-form__inputs">
-              <input class="name input" name="username" type="text" class="input" id="name" placeholder="Naam"/>
+              <input class="name input" name="user_name" type="text" class="input" id="name" placeholder="Naam"/>
             </p>
                         
             <p class="login-form__inputs">
