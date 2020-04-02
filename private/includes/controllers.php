@@ -1,9 +1,5 @@
 <?php 
 
-// function home() {
-//     include "home.php";
-//
-
 function feed() {
 
     global $CONFIG;
@@ -16,9 +12,24 @@ function feed() {
     include $view;
 }
 
+
+function profile() {
+
+    global $CONFIG;
+
+    logInCheck();
+
+    $view = $CONFIG['view_path'] . '/profile.php';
+    $posts = get_userposts($_SESSION['user_id']);
+    
+    include $view;
+}
+
 function upload() {
 
     global $CONFIG;
+
+    logInCheck();
 
     if (isset($_POST['upload'])) {
         $filename = basename($_FILES['image']['name']);
@@ -28,7 +39,7 @@ function upload() {
         $tags  = $_POST[ 'tag'];
               if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
                 save_photo($filename, $caption, $tags);
-                header("Location: index.php?page=upload");
+                header("Location: index.php?page=feed");
               } else {
                   echo "something went wrong";
               }
@@ -103,6 +114,6 @@ function createaccount() {
     }
 }
 
-// function contact() {
-//     include "contact.php";
-// }
+function toUpload() {
+    $test = 'Home';
+}

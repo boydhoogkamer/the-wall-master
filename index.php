@@ -18,6 +18,9 @@ switch ( $_GET['page'] ) {
 	case 'feed':
 		feed();
 		break;
+	case 'profile':
+		profile();
+		break;
 	case 'upload':
 		upload();
 		break;
@@ -26,7 +29,9 @@ switch ( $_GET['page'] ) {
 		break;
     case 'checkpassword':
 		checkpassword();
+		break;
 	case 'createaccount':
 		createaccount();
+		break;
         
 }
