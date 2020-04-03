@@ -37,9 +37,9 @@ foreach ($posts as $post):
 <p class="menu-middle-caption"><?php echo $post_caption ?></p>
 </div>
 <div class="menu-right">
-    <img class="icon-like" src="images/thumbsup.svg" alt="Thumbs Up!">
+    <!-- <img class="icon-like" src="images/thumbsup.svg" alt="Thumbs Up!">
     <img class="icon-reaction" src="images/reaction.svg" alt="React!">
-    <img class="icon-share" src="images/share.svg" alt="Share!">
+    <img class="icon-share" src="images/share.svg" alt="Share!"> -->
 </div>
 </div>
 <script src="js/feed.js"></script>

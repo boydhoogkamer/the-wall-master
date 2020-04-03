@@ -1,6 +1,6 @@
 <?php require __DIR__ . "/../templates/header.php"; ?>
 <div class="backgroundvid__div">
-    <video class="backgroundvid" muted loop playsinline>
+    <video class="backgroundvid" autoplay muted loop playsinline>
         <source src='videos/backgroundvid.mp4' type="video/mp4">
         </video>
 </div>
