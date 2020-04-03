@@ -1,0 +1,78 @@
+.editprofile__background {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 214, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editprofile__div {
+    width: 70vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.edit-top {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.edit-uploaded__img {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 10px;
+background-color: rgb(87, 87, 87);
+}
+
+.edit-upload__label {
+    color: rgb(0, 0, 0);
+}
+
+.edit-submitbutton {
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #C42257;
+    color: rgb(255, 255, 255);   
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+@media only screen and (min-height: 600px) {
+
+    .edit-uploaded__img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        }
+
+        .edit-upload__label {
+           font-size: 1.5em;
+        }
+    
+        .edit-submitbutton {
+            margin-top: 30px;
+            cursor: pointer;
+            border: none;
+            background-color: #C42257;
+            color: rgb(255, 255, 255);   
+            width: 170px;
+            height: 50px;
+            border-radius: 20px;
+            font-size: 1.5em;
+        }
+}

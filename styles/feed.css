@@ -7,14 +7,10 @@
     font-family: 'Comfortaa', cursive;
 }
 
-::-webkit-scrollbar { 
-    display: none; 
+*:hover, *:visited, *:link, *:active
+{
+    text-decoration: none;
 }
-
-body, html {
-    background-color: rgb(0, 0, 0);
-    overflow-y: hidden;
-    } 
 
 .images-div {
     position: fixed;
@@ -23,6 +19,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(255, 214, 214);
 }
 
 .feed-image {

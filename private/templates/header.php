@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="styles/login.css">
     <link rel="stylesheet" type="text/css" href="styles/upload.css">
     <link rel="stylesheet" type="text/css" href="styles/topbar.css">
+    <link rel="stylesheet" type="text/css" href="styles/profile.css">
+    <link rel="stylesheet" type="text/css" href="styles/editprofile.css">
+    <link rel="stylesheet" type="text/css" href="styles/info.css">
     <meta name='msapplication-TileImage' content="">
     <meta name='msapplication-TileColor' content="#292A2E">
 	<meta name="msapplication-square310x310logo" content="">

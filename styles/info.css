@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+.info__background {
+    background-color: rgb(255, 189, 189);
+    padding: 80px;
+}
+
+.info__titel {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #C42257;
+    text-align: center;
+}
+
+.info__groottext {
+    border-radius: 20px;
+    margin: 40px 200px;
+    padding: 20px;
+    color: rgb(255, 113, 161);
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.info__kleintext {
+    margin: 0px 60px;
+    color: #C42257;
+    font-size: 20px;
+    text-align: center;
+}
+
+.info__vraagtext {
+    margin: 60px 60px 10px 60px;
+    color: rgb(255, 113, 161);
+    font-size: 25px;
+    text-align: center;
+}
+
+.info_span {
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.info_span:hover {
+    color: #FF88AF;
+}
+
+.info_span:hover, .info_span:hover:visited, .info_span:hover:link, .info_span:hover:active
+{
+    text-decoration: none;
+    color: white;
+}

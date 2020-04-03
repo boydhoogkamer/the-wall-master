@@ -18,8 +18,14 @@ switch ( $_GET['page'] ) {
 	case 'feed':
 		feed();
 		break;
+	case 'info':
+		info();
+		break;
 	case 'profile':
 		profile();
+		break;
+	case 'editprofile':
+		editProfile();
 		break;
 	case 'upload':
 		upload();

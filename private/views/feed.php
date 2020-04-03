@@ -1,6 +1,15 @@
  <?php require __DIR__ . "/../templates/header.php"; ?>
  <?php include __DIR__ . "/../includes/rotate.php"; ?>
  <?php include __DIR__ . "/../templates/topbar.php"; ?>
+ <style>
+ ::-webkit-scrollbar { 
+    display: none; 
+}
+
+body, html {
+    overflow-y: hidden;
+    } 
+</style>
 <?php 
 
 $post_array = [];
@@ -10,7 +19,7 @@ foreach ($posts as $post):
     $post_image = $post['image'];
     $post_username = $post['user_name'];
     $post_caption = $post['caption'];
-    $post_userimg = $post['userimg'];
+    $post_userimg = $post['user_img'];
  endforeach;
 
 ?>
